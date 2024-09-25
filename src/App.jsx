@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import GallerySection from './sections/GallerySection'
 import HeaderSection from './sections/HeaderSection'
 import FontSection from './sections/FondSection'
+import FooterSection from './sections/FooterSection'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <div ref={sectionRefs.GallerySection}>
         <GallerySection />
       </div>
+      <FooterSection/>
     </div>
   )
 }
