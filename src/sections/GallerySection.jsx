@@ -140,16 +140,16 @@ const GallerySection = () => {
                 <div className="transition duration-500 ease-in-out transform">
                     {gallery.map((image, index) => {
                         return (
-                            <div key={index} className="relative">
-                                <motion.img initial={{ opacity: 0, y: 50 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1 }}
-                                    key={index} src={image.src}
+                            <motion.div key={index} className="relative"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1 }}>
+                                <img key={index} src={image.src}
                                     alt={image.alt}
                                     className="w-full object-cover py-2 hover:filter hover:brightness-75 transition duration-500 ease-in-out transform"
                                 />
-                                {image.text && <p className="absolute bottom-0 right-0 p-2 bg-white bg-opacity-50">{image.text}</p>}
-                            </div>
+                                {image.text && <p className="absolute bottom-0 right-0 p-2 mb-2 bg-white bg-opacity-70 text-black font-semibold">{image.text}</p>}
+                            </motion.div>
                         );
                     })}
                 </div>

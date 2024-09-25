@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div className="w-[80%] mx-auto">
+    <div className="w-[80%] mx-auto bg-gradient-to-r from-blue-900 via-purple-900 to-gray-900 text-white">
       <FontSection />
       <Navbar scrollToSection={scrollToSection} />
       <div ref={sectionRefs.HeaderSection}>
