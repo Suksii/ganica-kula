@@ -1,24 +1,20 @@
-const Navbar = () => {
+const Navbar = ({scrollToSection}) => {
 
     const navMenu = [
         {
-            name: 'Header',
+            name: 'Ganića Kula',
             ref: 'HeaderSection'
         },
         {
-            name: 'Header',
-            ref: 'HeaderSection'
-        },
-        {
-            name: 'Header',
-            ref: 'HeaderSection'
+            name: 'Galerija',
+            ref: 'GallerySection'
         },
     ]
 
     return (
-        <div className="flex justify-end gap-20 sticky top-0">
+        <div className="flex justify-end h-16 gap-20 sticky top-0 bg-white z-50">
             {navMenu.map((menu, index) => (
-                <div key={index} className="hover:underline hover:underline-offset-8 cursor-pointer">
+                <div key={index} className="hover:underline hover:underline-offset-8 cursor-pointer" onClick={() => scrollToSection(menu.ref)}>
                     <p className="text-xl py-4">{menu.name}</p>
                 </div>
             ))}
