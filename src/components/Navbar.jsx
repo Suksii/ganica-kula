@@ -1,4 +1,6 @@
-const Navbar = ({scrollToSection}) => {
+import { useEffect, useState } from "react";
+
+const Navbar = ({ scrollToSection }) => {
 
     const navMenu = [
         {
@@ -12,10 +14,10 @@ const Navbar = ({scrollToSection}) => {
     ]
 
     return (
-        <div className="flex justify-end h-16 gap-20 sticky top-0 z-50 px-10">
+        <div className={`flex justify-end h-16 gap-20 sticky top-0 z-50 px-10`}>
             {navMenu.map((menu, index) => (
                 <div key={index} className="hover:underline hover:underline-offset-8 cursor-pointer" onClick={() => scrollToSection(menu.ref)}>
-                    <p className="text-xl py-4">{menu.name}</p>
+                    <p className="text-lg md:text-xl py-4">{menu.name}</p>
                 </div>
             ))}
         </div>

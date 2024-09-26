@@ -3,7 +3,6 @@ const FontSection = () => {
     const fondLink = "https://fzm.me/v/";
     const fondLogo = "https://upload.wikimedia.org/wikipedia/commons/2/23/Coat_of_arms_of_Montenegro.svg";
     const goToFond = () => {
-        console.log("Fond")
         window.open(fondLink);
     }
 
