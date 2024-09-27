@@ -15,7 +15,10 @@ function App() {
   const scrollToSection = (sectionName) => {
     const sectionRef = sectionRefs[sectionName];
     if (sectionRef && sectionRef.current)
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: sectionRef.current.offsetTop - 50,
+        behavior: 'smooth',
+      });
   }
 
   return (
