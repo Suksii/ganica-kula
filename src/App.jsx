@@ -31,7 +31,7 @@ function App() {
       <div ref={sectionRefs.GallerySection}>
         <GallerySection />
       </div>
-      <FooterSection/>
+      <FooterSection />
     </div>
   )
 }

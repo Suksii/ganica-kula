@@ -1,3 +1,4 @@
+import {lazy, Suspense} from 'react';
 import ganicaKula1 from "../assets/ganica-kula-1.jpg";
 import ganicaKula2 from "../assets/ganica-kula-2.jpg";
 import ganicaKula3 from "../assets/ganica-kula-3.jpg";
@@ -19,8 +20,10 @@ import ganicaKula18 from "../assets/ganica-kula-18.jpg";
 import ganicaKula19 from "../assets/ganica-kula-19.jpg";
 import ganicaKula20 from "../assets/ganica-kula-20.jpg";
 import ganicaKula21 from "../assets/ganica-kula-21.jpg";
+import ganicaKula from "../assets/ganica-kula.mp4";
 import { motion } from 'framer-motion';
 import Header from "../components/Header";
+const VideoComponent = lazy(() => import('../components/Video'))
 
 const GallerySection = () => {
 
@@ -136,6 +139,9 @@ const GallerySection = () => {
     return (
         <>
             <Header title={"Galerija"} />
+            <Suspense fallback={<div>Loading...</div>}>
+                <VideoComponent/>
+            </Suspense>
             <div className="w-full gallery">
                 <div className="transition duration-500 ease-in-out transform">
                     {gallery.map((image, index) => {
