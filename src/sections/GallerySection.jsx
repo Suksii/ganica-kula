@@ -20,7 +20,6 @@ import ganicaKula18 from "../assets/ganica-kula-18.jpg";
 import ganicaKula19 from "../assets/ganica-kula-19.jpg";
 import ganicaKula20 from "../assets/ganica-kula-20.jpg";
 import ganicaKula21 from "../assets/ganica-kula-21.jpg";
-import ganicaKula from "../assets/ganica-kula.mp4";
 import { motion } from 'framer-motion';
 import Header from "../components/Header";
 const VideoComponent = lazy(() => import('../components/Video'))
