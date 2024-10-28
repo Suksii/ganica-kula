@@ -7,6 +7,7 @@ This project is a web application built with React.js and it contains informativ
 ## Technologies Used
 - **React.js:**
   - `useState, useRef, useEffect`
+  - lazy, Suspense
   - `framer-motion`
   - `tailwindCSS`
  
